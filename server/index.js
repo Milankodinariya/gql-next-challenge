@@ -116,7 +116,6 @@ const resolvers = {
             return playersList.map(player => {
                 const findTeam = teamsList.find(team => team.id === player.teamId) || {}
                 const findLeague = findTeam && findTeam.leagueId && leagueList.find(league => league.id === findTeam.leagueId) || {}
-                console.log({...player, team: findTeam, league: findLeague})
                 return {...player, team: findTeam, league: findLeague}
             })
         }
